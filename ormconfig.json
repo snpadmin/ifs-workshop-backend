@@ -3,8 +3,8 @@
     "host": "localhost",
     "port": 5433,
     "username": "postgres",
-    "password": "herePassword",
-    "database": "DatabaseName",
+    "password": "Polsat131",
+    "database": "postgres",
     "synchronize": true,
     "logging": false,
     "entities": [

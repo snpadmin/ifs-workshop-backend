@@ -11,7 +11,7 @@ export class AppController {
   }
 
   @Get('/dbtest')
-  getDbTest(): string {
+  getDbTest(): Promise<string> {
     return this.appService.getDbTest();
   }
 

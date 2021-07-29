@@ -3,9 +3,9 @@ import { AppModule } from './app.module';
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 
-
 export const connection = createConnection().then(async connection => {
   console.log('Connection successful');
+  return connection;
 }).catch(error => console.log(error));
 
 async function bootstrap() {

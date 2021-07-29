@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Connection } from 'typeorm';
 import { connection } from './main';
 
 @Injectable()
@@ -7,10 +8,11 @@ export class AppService {
     return 'Hello World! xD';
   }
 
-  getDbTest(): string {
-    connection.then(async conn => {
-      console.log('Test db connection');
-    }).catch(error => console.log(`Error in connection:: ${error}`));
+  async getDbTest(): Promise<string> {
+    const conn = await connection;
+    console.log('Test db connection');
+    const result = await (conn as Connection).query('select * from user');
+    console.log(result);
     return '';
   }
 }
