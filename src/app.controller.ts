@@ -10,6 +10,11 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  @Get('getDbPassword')
+  getDbPassword(): string {
+    return this.appService.getDbPassword();
+  }
+
   @Get('/dbtest')
   getDbTest(): Promise<string> {
     return this.appService.getDbTest();

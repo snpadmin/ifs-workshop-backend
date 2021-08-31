@@ -8,5 +8,6 @@ import { StatisticDataService } from './statistic-data.service';
   providers: [...statisticDataProviders,
     StatisticDataService
   ],
+  exports: [StatisticDataService]
 })
 export class StatisticDataModule {}
